@@ -1,0 +1,86 @@
+@import "@fontsource/poppins";
+@import "@fontsource/poppins/400.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide Next.js Static Route Button */
+nextjs-portal,
+.nextjs-toast,
+.nextjs-static-indicator-toast-icon {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #fff;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Tablet view */
+
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column;
+  }
+  .left-container {
+    width: 100%;
+  }
+  .left-container {
+    flex-direction: row-reverse;
+  }
+  .left-container-content {
+    align-items: flex-start;
+  }
+  .right-containers {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .banner-all-feature-container {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile view */
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+  }
+  .left-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .left-container-content {
+    align-items: center;
+  }
+  .left-container img {
+    margin-bottom: 15px;
+    width: 80%;
+  }
+  .second-container {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .right-containers {
+    flex-direction: column;
+  }
+}
